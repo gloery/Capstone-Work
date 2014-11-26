@@ -1,0 +1,58 @@
+{
+  "name": "TEST",
+  "description": "Panel that shows a UI",
+  "version": "2.0",
+
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+
+  "optional_permissions": [
+    "http://en.wikipedia.org/w/api.php"
+  ],
+  
+  "background": {
+    "scripts": ["simpleHeatMap.js", "preProcess.js","panel.js", "index.js", "processDataForUI.js","background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["simpleHeatMap.js", "panel.js", "index.js", "background.js"]
+    }
+  ],
+
+  "commands":{
+    "toggle-feature-foo":{
+      "suggested_key":{
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E",
+        "windows": "Ctrl+Shift+E"
+        },
+        "description": "toggle-feature-foo",
+        "global": true
+      },
+
+    "_execute_browser_action": {
+      "suggested_key":{
+        "default": "Ctrl+Shift+I",
+        "mac": "Ctrl+Shift+I",
+        "windows": "Ctrl+Shift+I"
+      }
+    },
+    "_execute_page_action":{
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "Ctrl+Shift+U",
+        "windows": "Ctrl+Shift+U"
+      }
+    }
+    }, 
+
+  "browser_action": {
+    "default_title": "TEST"
+  },
+  "manifest_version": 2
+}
