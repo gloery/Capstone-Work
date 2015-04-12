@@ -3,4 +3,4 @@ Capstone-Work
 
 A collection of Wikipedia tools implented in a Chrome browser extension to give users information to assist in determining the reliability of Wikipedia articles and users.
 
-This is a work in progress. Updates will be pushed as they are completed, and the project is scheduled to be completed in mid-February 2015.
+This is an old version of the code. For the full results of the project, and instructions for installing the software, visit http://cs.carleton.edu/cs_comps/1415/jadrian3/final-results/index.html
